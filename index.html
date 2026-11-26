@@ -4,100 +4,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K S Gowthami | Portfolio</title>
+    <title>K S Gowthami | Embedded Systems Portfolio</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            background: #f4f6f9;
-            color: #222;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
-        header {
-            background: #172554;
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        nav {
+            background: #101d35;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #101d35, #1e4775);
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero h3 {
+            color: #93c5fd;
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 11px 25px;
+            margin: 25px 8px 0;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #2563eb;
         }
 
         section {
-            max-width: 900px;
-            margin: 25px auto;
-            padding: 25px;
+            max-width: 1050px;
+            margin: 55px auto;
+            padding: 0 25px;
+        }
+
+        section h2 {
+            color: #17365d;
+            font-size: 28px;
+            margin-bottom: 22px;
+            border-bottom: 3px solid #3b82f6;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .card {
             background: white;
+            padding: 25px;
+            margin-bottom: 20px;
             border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
         }
 
-        h2 {
-            color: #172554;
+        .card h3 {
+            color: #1d4ed8;
+            margin-bottom: 8px;
         }
 
-        a {
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skills span {
+            background: #e0edff;
+            color: #17365d;
+            padding: 9px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .card a {
             color: #2563eb;
             text-decoration: none;
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
-            background: #172554;
+            background: #101d35;
             color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 650px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>K S GOWTHAMI</h1>
+<nav>
+    <h2>Gowthami.</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>Hi, I'm K S Gowthami</h1>
     <h3>Embedded Systems | Firmware Developer</h3>
-    <p>Electronics and Communication Engineering Graduate</p>
+    <p>
+        Electronics and Communication Engineering graduate
+        interested in Embedded Systems, Firmware Development
+        and IoT-based applications.
+    </p>
+
+    <a class="btn" href="#projects">View My Projects</a>
+    <a class="btn" href="#contact">Contact Me</a>
 </header>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
-    <p>
-        I am an Electronics and Communication Engineering graduate
-        interested in Embedded Systems and Firmware Development.
-        I have knowledge of C programming, Embedded C, microcontrollers,
-        Arduino, ESP32 and IoT-based projects.
-    </p>
+    <div class="card">
+        <p>
+            I am an Electronics and Communication Engineering graduate
+            with knowledge of C programming, Embedded C, data structures
+            and microcontrollers.
+        </p>
+        <p>
+            I have worked on C programming projects involving file handling
+            and bit manipulation, along with Arduino-based projects using
+            sensors and embedded hardware.
+        </p>
+        <p>
+            I am looking for an entry-level opportunity in Embedded Systems
+            or Firmware Development where I can apply my skills and learn
+            new technologies.
+        </p>
+    </div>
 </section>
 
-<section>
+<section id="skills">
     <h2>Technical Skills</h2>
-    <p>C | C++ | Embedded C | Data Structures | Arduino | ESP32 |
-       LoRa | Linux | GCC | Git | GitHub</p>
+    <div class="card">
+        <h3>Programming</h3>
+        <div class="skills">
+            <span>C</span>
+            <span>C++</span>
+            <span>Embedded C</span>
+            <span>Data Structures</span>
+        </div>
+
+        <br>
+        <h3>Embedded Systems</h3>
+        <div class="skills">
+            <span>Arduino Uno</span>
+            <span>Arduino Nano</span>
+            <span>ESP32</span>
+            <span>ESP8266</span>
+            <span>Microcontrollers</span>
+            <span>Sensors</span>
+            <span>LoRa</span>
+        </div>
+
+        <br>
+        <h3>Tools and Concepts</h3>
+        <div class="skills">
+            <span>Linux / Ubuntu</span>
+            <span>GCC</span>
+            <span>Arduino IDE</span>
+            <span>Keil</span>
+            <span>Proteus</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Pointers</span>
+            <span>File Handling</span>
+            <span>Bit Manipulation</span>
+        </div>
+    </div>
 </section>
 
-<section>
-    <h2>Projects</h2>
+<section id="projects">
+    <h2>My Projects</h2>
 
-    <h3>LSB Image Steganography</h3>
-    <p>Developed a C application to hide and retrieve secret data
-       in BMP images using LSB techniques.</p>
+    <div class="card">
+        <h3>1. LSB Image Steganography</h3>
+        <p>
+            Developed a C application to hide secret information inside
+            BMP images using the Least Significant Bit technique.
+            Implemented encoding and decoding using file handling
+            and bit manipulation.
+        </p>
+        <p><b>Technologies:</b> C, File Handling, Bit Manipulation, Linux</p>
+        <p><a href="https://github.com/gowthami-k-s">View GitHub Profile</a></p>
+    </div>
 
-    <h3>MP3 Tag Reader and Editor</h3>
-    <p>Developed a C application to view and edit MP3 ID3 metadata.</p>
+    <div class="card">
+        <h3>2. MP3 Tag Reader and Editor</h3>
+        <p>
+            Developed a C application to read and modify MP3 ID3 metadata
+            such as title, artist, album and year. Used structures,
+            pointers and binary file handling.
+        </p>
+        <p><b>Technologies:</b> C, Structures, Pointers, File Handling</p>
+        <p><a href="https://github.com/gowthami-k-s">View GitHub Profile</a></p>
+    </div>
 
-    <h3>Address Book Management System</h3>
-    <p>Created a contact management application using structures
-       and CSV file handling.</p>
+    <div class="card">
+        <h3>3. Address Book Management System</h3>
+        <p>
+            Developed a menu-driven contact management application
+            to create, search, edit, delete and list contacts.
+            Used structures and CSV file handling to store contact details.
+        </p>
+        <p><b>Technologies:</b> C, Structures, File Handling, CSV</p>
+        <p><a href="https://github.com/gowthami-k-s">View GitHub Profile</a></p>
+    </div>
 
-    <h3>Geo-Fencing Based Cattle Monitoring System</h3>
-    <p>Developed an IoT project using ESP32 and LoRa to monitor
-       cattle movement using RSSI and provide alerts.</p>
+    <div class="card">
+        <h3>4. Geo-Fencing Based Cattle Monitoring System</h3>
+        <p>
+            Developed an IoT-based cattle monitoring system using ESP32
+            and LoRa communication. Used RSSI values to estimate the
+            distance between transmitter and receiver and identify
+            movement outside a defined boundary.
+        </p>
+        <p><b>Technologies:</b> ESP32, LoRa, GSM, Embedded C, RSSI</p>
+        <p><a href="https://github.com/gowthami-k-s">View GitHub Profile</a></p>
+    </div>
 </section>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: gowthamiks2004@gmail.com</p>
-    <p><a href="https://github.com/gowthami-k-s">GitHub Profile</a></p>
-    <p><a href="https://linkedin.com/in/gowthami-k-s-4313883ab">LinkedIn Profile</a></p>
+<section id="experience">
+    <h2>Training & Experience</h2>
+
+    <div class="card">
+        <h3>Embedded Systems Training - Emertxe Institute</h3>
+        <p>
+            Training in C programming, Embedded C, data structures,
+            Linux and debugging, with practical project development.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Electronics Intern - Aaviza Electronics</h3>
+        <p>
+            Four months of practical exposure to electronic components,
+            hardware troubleshooting and basic embedded-system applications.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Intern - Kuppam Electro Solutions Private Limited</h3>
+        <p>
+            Four months of practical work involving Arduino, sensors,
+            basic electronics and embedded-system tasks.
+        </p>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+        <h3>B.Tech - Electronics and Communication Engineering</h3>
+        <p>Kuppam Engineering College | 2023 - 2026</p>
+        <p>Percentage: 82%</p>
+    </div>
+
+    <div class="card">
+        <h3>Diploma - Electronics and Communication Engineering</h3>
+        <p>Kuppam Engineering College | 2020 - 2023</p>
+        <p>Percentage: 88.06%</p>
+    </div>
+
+    <div class="card">
+        <h3>Class X</h3>
+        <p>Infant Jesus English Medium School, V. Kota | 2019 - 2020</p>
+        <p>Percentage: 98%</p>
+    </div>
+</section>
+
+<section id="achievements">
+    <h2>Achievements & Certifications</h2>
+    <div class="card">
+        <ul>
+            <li>Certificate in Computer Hardware and Networking - Cisco</li>
+            <li>Student Spot Award - Emertxe Institute</li>
+            <li>Third Place in Design Thinking Competition</li>
+            <li>Participated in Anveshana 2025 and college project expos</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+        <p><b>Email:</b>
+            <a href="mailto:gowthamiks2004@gmail.com">
+                gowthamiks2004@gmail.com
+            </a>
+        </p>
+
+        <p><b>GitHub:</b>
+            <a href="https://github.com/gowthami-k-s" target="_blank">
+                github.com/gowthami-k-s
+            </a>
+        </p>
+
+        <p><b>LinkedIn:</b>
+            <a href="https://linkedin.com/in/gowthami-k-s-4313883ab" target="_blank">
+                View LinkedIn Profile
+            </a>
+        </p>
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 K S Gowthami | Portfolio</p>
+    <p>© 2026 K S Gowthami | Personal Portfolio</p>
 </footer>
 
 </body>
